@@ -2,10 +2,10 @@ const { Pool } = require('pg');
 
 // Créez un pool de connexions avec vos informations de connexion à la base de données PostgreSQL
 const pool = new Pool({
-  user: 'votre_utilisateur',
+  user: 'postgres',
   host: 'localhost',
-  database: 'votre_base_de_donnees',
-  password: 'votre_mot_de_passe',
+  database: 'api',
+  password: 'postgres',
   port: 5432,
 });
 

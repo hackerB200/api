@@ -18,6 +18,7 @@ app.post('/articles', async (req, res) => {
     const article = await createArticle(req.body);
     res.status(201).json(article);
   } catch (error) {
+    console.log(error);
     res.status(500).json({ error: 'Erreur lors de la création de l\'article' });
   }
 });
