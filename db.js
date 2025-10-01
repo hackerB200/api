@@ -2,11 +2,11 @@ const { Pool } = require('pg');
 
 // Créez un pool de connexions avec vos informations de connexion à la base de données PostgreSQL
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'api',
-  password: 'postgres',
-  port: 5432,
+  user: process.env.PGUSER || 'postgres',
+  password: process.env.PGPASSWORD || 'postgres',
+  host: process.env.PGHOST || 'localhost',
+  port: process.env.PGPORT || 5432,
+  database: process.env.PGDATABASE || 'api',
 });
 
 // Fonction pour obtenir la connexion à la BD
